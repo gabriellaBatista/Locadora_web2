@@ -9,6 +9,6 @@ class Filme extends Model
 {
     use HasFactory;
     public function user(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Filme::class,'filme_locacaos')->withPivot('quantidade');
     }
 }
